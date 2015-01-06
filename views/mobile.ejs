@@ -1,0 +1,76 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Available Products</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen, projection, tv" />
+<link rel="stylesheet" href="/style-print.css" type="text/css" media="print" />
+</head>
+<body>
+<div id="wrapper">
+  <div class="title">
+    <div class="title-top">
+      <div class="title-left">
+        <div class="title-right">
+          <div class="title-bottom">
+            <div class="title-top-left">
+              <div class="title-bottom-left">
+                <div class="title-top-right">
+                  <div class="title-bottom-right">
+                    <h1><a href="http://all-free-download.com/free-website-templates/">BEST <span>BUY</span> WEBSITE</a></h1>
+                    <p>One door to all your problems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="noscreen" />
+  <div class="content">
+    <div class="column-left">
+      <h3>MENU</h3>
+      <a href="#skip-menu" class="hidden">Skip menu</a>
+      <ul class="menu">
+        <li><a href="/second" >Home</a></li>
+        <li><a href="/laptop" >Laptops</a></li>
+        <li><a href="/car" >Cars</a></li>
+        <li><a href="/mobile" class="active" >Mobiles</a></li>
+        
+        <li class="last"><a href="http://all-free-download.com/free-website-templates/">Contact US</a></li>
+      </ul>
+    </div>
+    <div id="skip-menu"></div>
+    <div class="column-right">
+      <div class="box">
+        <div class="box-top"></div>
+        <div class="box-in">
+          <h2>Products available in Mobiles are </h2>
+         
+         <% userlist.forEach( function( todo ){ 	%>
+   		<p><a href ="/lg/<%=todo.id2 %>" ><img src= "/img/<%= todo.image3 %>" width="300px" height="200px"   ></a></p>
+   		<br>
+  		<p><%= todo.brand %></p> 			
+   	
+		<% }); %>
+  
+
+          
+          
+          
+          <ul class="main-list">
+          </ul>
+        </div>
+      </div>
+      <div class="box-bottom">
+        <hr class="noscreen" />
+      </div>
+    </div>
+    <div class="cleaner">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>

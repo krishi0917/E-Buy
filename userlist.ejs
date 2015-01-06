@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Product details </title>
+  </head>
+  <body>
+  
+  	<p>USERLIST</p>
+   	<ul>
+   		<% userlist.forEach( function( todo ){ %>
+  			<p><%= todo.mileage %></p>
+  			<p><%= todo.model %></p>
+  			<p><%= todo.condition %></p>
+				<% }); %>
+   	</ul> 	
+  </body>
+</html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Shopping Cart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen, projection, tv" />
+<link rel="stylesheet" href="/style-print.css" type="text/css" media="print" />
+</head>
+<body>
+<div id="wrapper">
+  <div class="title">
+    <div class="title-top">
+      <div class="title-left">
+        <div class="title-right">
+          <div class="title-bottom">
+            <div class="title-top-left">
+              <div class="title-bottom-left">
+                <div class="title-top-right">
+                  <div class="title-bottom-right">
+                    <h1><a href="/second">BEST <span>BUY</span> WEBSITE</a></h1>
+                    <p>One door to all your problems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="noscreen" />
+  <div class="content">
+    <div class="column-left">
+      <h3>MENU</h3>
+      <a href="#skip-menu" class="hidden">Skip menu</a>
+      <ul class="menu">
+        <li><a href="/second" >Home</a></li>
+        <li><a href="/laptop" >Laptops</a></li>
+        <li><a href="/car" >Cars</a></li>
+        <li><a href="/mobile" class="active">Mobiles</a></li>
+        
+        <li class="last"><a href="#">Contact US</a></li>
+      </ul>
+    
+    </div>
+    
+    <div class="column-right">
+      <div class="box">
+        <div class="box-top"></div>
+        <div class="box-in">
+          <h2>Details of the following product is as follows</h2>
+  
+  <ul>
+   		<table style ="width:100%" "height:100%">
+   		<% userlist.forEach( function( todo ){ 	%>
+   		
+   		<p><img src= "/img/<%= todo.image3 %>" width="300px" height="200px"   ></p>
+   		
+   		
+   		<form method = "post" action = "http://localhost:8080/j2eeproject/ProductInventory/<%=todo.id2 %>" >
+   		<tr>
+	     
+  			<tr>	<p><td><strong>ID </strong>   </td>   <td><input name="productId"  value="<%= todo.id2 %>">   </td></p></tr> 
+   		    <tr>	<p><td><strong>Brand</strong>   </td>   <td>   <input name="brand"  value="<%=todo.brand%>">        </td></p></tr>
+  		    <tr>	<p><td><strong>Cost</strong>        </td>  <td><input name="price"  value="<%=todo.cost%>">         </td>  </p> </tr>
+  		    <br>
+  		    <tr>	<p><td><strong>Screen Size:</strong></td>  <td><input name="screensize" value="<%=todo.screensize%>">   </td></p></tr>
+  			<tr>	<p><td><strong>Memory</strong></td>  <td><input name="HDDCapacity"  value="<%=todo.memory%>">   </td></p></tr>
+  			<tr>	<p><td><strong>HD Space</strong>       </td>  <td><input name="color"  value="<%=todo.hdspace%>">       </td></p> </tr>
+  			<tr>	<p><td><strong>Operating System</strong></td><td><input name="os" value="<%=todo.os%>">          </td></p> </tr>
+  		
+ 	<tr><p><td><strong>	 	<label for= "quantity">Qty : </label> </strong>
+  			<select id="quantity" name ="quantity">
+  				<option value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+  				<option value="4">4</option>
+  			</select>
+  		
+  		<% if(available == 1 || (todo.startDate < todo.endDate && todo.currentDate < todo.endDate))
+  		{ %>   
+  			<input type = "submit" name="submit" value = "Buy Now" >
+  			<h4><font color = "green"><i> In Stock </i></font></h4>
+  			
+  		 <%
+  		}
+  		else { %>  		<input type = "submit" name="submit" value = "Buy Now" disabled >
+  					<h4><font color = "red"><i> Product is no longer available </i></font></h4>
+  	
+  				<%
+  			 }%>
+  			 
+ 		</td></td>	</td></p></tr>
+  		
+  			</tr>
+  	
+ </form>
+  	
+ 
+  				 
+   		
+   		
+   		
+   		
+   	
+				<% }); %>
+  
+   	
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+     
+
+   	
+   	</ul> 	
+  </html>
+          
+         
+
+          
+          
+           <ul class="main-list">
+          </ul>
+        </div>
+      </div>
+      <div class="box-bottom">
+        <hr class="noscreen" />
+      </div>
+    </div>
+    <div class="cleaner">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>
